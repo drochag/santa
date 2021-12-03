@@ -1,0 +1,155 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    //
+    // Prettier rules
+    //
+    "prettier/prettier": ["error"],
+    //
+    //  IMPORT RULES
+    //
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "off",
+    // bad for monorepo arch
+    "import/no-extraneous-dependencies": "off",
+    // makes grouping harder
+    "import/newline-after-import": "off",
+    // make sure imports are resolved
+    "import/no-unresolved": 2,
+    // makes code cleaner this way
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    //
+    //  TS RULES
+    //
+    // not necessary @typescript-eslint/explicit-module-boundary-types will protect us
+    "@typescript-eslint/explicit-function-return-type": "off",
+    // ts counterparts of eslint base rules
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/dot-notation": ["error"],
+    "@typescript-eslint/no-implied-eval": ["error"],
+    "@typescript-eslint/no-throw-literal": ["error"],
+    "@typescript-eslint/return-await": ["error"],
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "none",
+        "caughtErrors": "none"
+      }
+    ],
+    "react/default-props-match-prop-types": [
+      "error",
+      {
+        // In TypeScript we want to know that a certain prop is defined during render
+        "allowRequiredDefaults": true
+      }
+    ],
+    // forces to destructure - easier to read
+    "react/destructuring-assignment": 2,
+    // off due to ts
+    "react/forbid-prop-types": "off",
+    // makes code really ugly
+    "react/jsx-curly-brace-presence": "off",
+    // we use TS so .tsx is default
+    "react/jsx-filename-extension": "off",
+    // Prefer shorthand always - works nice with react 17
+    "react/jsx-fragments": "error",
+    // disabled since spread makes code much cleaner
+    "react/jsx-props-no-spreading": "off",
+    // enforced to avoid costly mistakes
+    "react/no-array-index-key": "error",
+    // we use certain text editors and often its required
+    "react/no-danger": "off",
+    // avoids costly mistakes
+    "react/no-direct-mutation-state": "error",
+    // let developers choose whats right
+    "react/require-default-props": "off",
+    // not relevant
+    "react/sort-prop-types": "off",
+    // not important
+    "react/state-in-constructor": "off",
+    // makes code much cleaner
+    "react/jsx-boolean-value": "error",
+    // a bit wired in day to day use
+    "react/prop-types": "off",
+    // helps avoid small mistakes
+    "react/no-unescaped-entities": "warn",
+    // disabled due to bad readability
+    "react/jsx-one-expression-per-line": "off",
+    // keys should be required
+    "react/jsx-key": "error",
+    // just warn do not inforce
+    "react/prefer-stateless-function": 1,
+    // just warning is enough
+    "react/no-typos": "warn",
+    // not needed
+    "react/jsx-uses-react": "off",
+    // not needed
+    "react/button-has-type": "off",
+    // does not play well with ts
+    "react/no-unused-prop-types": "off",
+    // not required since react 17
+    "react/react-in-jsx-scope": "off",
+    // makes code more readable
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "ignore",
+        "prop": "parens-new-line"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        // allows us to use require in js files
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off"
+      }
+    }
+  ]
+}
