@@ -4,7 +4,7 @@ export interface Person {
 }
 const secretSanta: Person[] = [
   { name: 'Abraham', secretSanta: 'Adareli' },
-  { name: 'Adareli', secretSanta: 'Virgini' },
+  { name: 'Adareli', secretSanta: 'Karina Edit' },
   { name: 'Arturo', secretSanta: 'Cesár Jabzee' },
   { name: 'Brenda Berenice', secretSanta: 'Abraham' },
   { name: 'Candy', secretSanta: 'María Fernanda' },
@@ -27,7 +27,7 @@ const secretSanta: Person[] = [
   { name: 'Susana', secretSanta: 'Brenda Berenice' },
   { name: 'Trisya Elen', secretSanta: 'Arturo' },
   { name: 'Valery Thania', secretSanta: 'Maurici' },
-  { name: 'Virgini', secretSanta: 'Trisya Elen' },
+  { name: 'Karina Edit', secretSanta: 'Trisya Elen' },
   { name: 'Yain Vianey', secretSanta: 'David Elía' },
 ]
 
