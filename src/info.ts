@@ -15,6 +15,7 @@ const secretSanta: Person[] = [
   { name: 'Erika Montserra', secretSanta: 'Ma Elizabeth' },
   { name: 'Grethel Irlanda', secretSanta: 'María del Rocio' },
   { name: 'José Daniel', secretSanta: 'María Ester' },
+  { name: 'Karina Edit', secretSanta: 'Trisya Elen' },
   { name: 'Ma Elizabeth', secretSanta: 'Valery Thania' },
   { name: 'María del Rocio', secretSanta: 'Grethel Irlanda' },
   { name: 'María Ester', secretSanta: 'Yain Vianey' },
@@ -27,7 +28,6 @@ const secretSanta: Person[] = [
   { name: 'Susana', secretSanta: 'Brenda Berenice' },
   { name: 'Trisya Elen', secretSanta: 'Arturo' },
   { name: 'Valery Thania', secretSanta: 'Maurici' },
-  { name: 'Karina Edit', secretSanta: 'Trisya Elen' },
   { name: 'Yain Vianey', secretSanta: 'David Elía' },
 ]
 
